@@ -5,4 +5,8 @@ class Cursos_Model extends CI_Model{
         return $this->db->get("cursos")->result_array();
     }
 
+    public function salva($curso) {
+        $this->db->insert("cursos", $curso);
+    }
+
 }
