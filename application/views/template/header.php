@@ -18,13 +18,14 @@
 <link rel="stylesheet" href="<?= base_url("vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.css") ?>" >
 <!-- JQVMap -->
 <link rel="stylesheet" href="<?= base_url("vendors/jqvmap/dist/jqvmap.css") ?>" >
-<!-- bootstrap-daterangepicker -->
-<link rel="stylesheet" href="<?= base_url("vendors/bootstrap-daterangepicker/daterangepicker.css") ?>" >
+
 <!-- animate -->
 <link rel="stylesheet" href="<?= base_url("vendors/animate.css/animate.css") ?>" >
 <link rel="stylesheet" href="<?= base_url("build/css/custom.css") ?> ">
 <!-- jQuery custom content scroller -->
 <link rel="stylesheet" href="<?= base_url("vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css") ?> ">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="<?= base_url("vendors/font-awesome/css/font-awesome.min.css") ?> ">
 <!-- Datatables -->
 <link rel="stylesheet" href="<?= base_url("vendors/datatables.net-bs/css/dataTables.bootstrap.min.css") ?> ">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

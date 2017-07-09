@@ -14,7 +14,7 @@
 <!-- bootstrap-progressbar -->
 <script src="<?= base_url("vendors/bootstrap-progressbar/bootstrap-progressbar.min.js")?>"></script>
 <!-- iCheck -->
-<script src="<?= base_url("vendors/iCheck/icheck.min.js")?>"></script>
+<script src="<?= base_url("vendors/iCheck/icheck.js")?>"></script>
 <!-- Skycons -->
 <script src="<?= base_url("vendors/skycons/skycons.js")?>"></script>
 <!-- Flot -->
@@ -33,9 +33,6 @@
 <script src="<?= base_url("vendors/jqvmap/dist/jquery.vmap.js")?>"></script>
 <script src="<?= base_url("vendors/jqvmap/dist/maps/jquery.vmap.world.js")?>"></script>
 <script src="<?= base_url("vendors/jqvmap/examples/js/jquery.vmap.sampledata.js")?>"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="<?= base_url("vendors/moment/min/moment.min.js")?>"></script>
-<script src="<?= base_url("vendors/bootstrap-daterangepicker/daterangepicker.js")?>"></script>
 <!-- validator -->
 <script src="<?= base_url("vendors/validator/validator.js")?>"></script>
 <!-- jQuery custom content scroller -->

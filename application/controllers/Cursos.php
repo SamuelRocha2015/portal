@@ -6,7 +6,7 @@ class Cursos extends CI_Controller{
     public function index(){
         $this->load->model("cursos_model");
         $cursos = $this->cursos_model->getAll();
-        $this->load->helper("currency");
+        $this->load->helper("utils");
         $this->load->view("curso-list.php",array("cursos" => $cursos));
     }
 

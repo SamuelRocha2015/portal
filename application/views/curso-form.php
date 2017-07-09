@@ -76,7 +76,7 @@
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-md-offset-3">
-                                            <button type="submit" class="btn btn-primary">Cancelar</button>
+                                            <button type="reset" class="btn btn-primary">Cancelar</button>
                                             <input type="submit" value="Enviar" class="btn btn-success">
                                         </div>
                                     </div>
