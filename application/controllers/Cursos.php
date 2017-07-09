@@ -7,11 +7,11 @@ class Cursos extends CI_Controller{
         $this->load->model("cursos_model");
         $cursos = $this->cursos_model->getAll();
         $this->load->helper("currency");
-        $this->load->view("cursos/index.php",array("cursos" => $cursos));
+        $this->load->view("curso-list.php",array("cursos" => $cursos));
     }
 
     public function form(){
-        return $this->load->view("cursos/form.php");
+        return $this->load->view("curso-form.php");
     }
 
     public function novo() {
