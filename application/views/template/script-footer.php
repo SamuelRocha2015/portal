@@ -37,6 +37,10 @@
 <script src="<?= base_url("vendors/validator/validator.js")?>"></script>
 <!-- jQuery custom content scroller -->
 <script src="<?= base_url("vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js")?>"></script>
+<!-- Parsley -->
+<script src="<?= base_url("vendors/parsleyjs/dist/parsley.min.js")?>"></script>
+<script src="<?= base_url("vendors/parsleyjs/src/i18n/pt-br.js")?>"></script>
+
 
 <!-- Datatables -->
 <script src="<?= base_url("vendors/datatables.net/js/jquery.dataTables.min.js")?>"></script>
