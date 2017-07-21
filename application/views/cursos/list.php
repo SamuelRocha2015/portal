@@ -1,7 +1,8 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include 'template/header.php' ?>
+    <?php $this->load->view('template/header.php'); ?>
 </head>
 <body class="nav-md">
 
@@ -17,10 +18,10 @@
 
 <div class="container body">
     <div class="main_container">
-        <?php include 'template/top-body.php' ?>
+        <?php $this->load->view('template/top-body'); ?>
 
         <!-- top navigation -->
-        <?php include 'template/top.php' ?>
+        <?php $this->load->view('template/top'); ?>
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -52,9 +53,9 @@
                                         <tr>
                                             <td><?= $curso["codigo"]?></td>
                                             <td><?= $curso["nome"]?></td>
-                                            <td><?= $curso["horas"]?></td>
+                                            <td><?= formataHoras($curso["horas"])?></td>
                                             <td><?= numeroEmReais($curso["preco"])?></td>
-                                            <td> X | V </td>
+                                            <td> <?= anchor("cursos/{$curso['id']}", "<i class=\"fa fa-edit\"></i>")?> |  <i class="fa fa-trash"></i>   </td>
                                         </tr>
                                     <?php endforeach ?>
                                     </tbody>
@@ -70,15 +71,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <?php include 'template/footer-info.php' ?>
+        <?php $this->load->view('template/footer-info'); ?>
         <!-- /footer content -->
 
     </div>
 </div>
-
-
-
-<?php include 'template/script-footer.php' ?>
+<?php $this->load->view('template/script-footer'); ?>
 
 </body>
 </html>

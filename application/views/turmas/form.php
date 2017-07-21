@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,15 +9,15 @@
     <!-- Bootstrap Colorpicker -->
     <link rel="stylesheet" href="<?= base_url("vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css") ?>" >
 
-    <?php include 'template/header.php' ?>
+    <?php $this->load->view('template/header.php'); ?>
 </head>
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-        <?php include 'template/top-body.php' ?>
+        <?php $this->load->view('template/top-body'); ?>
 
         <!-- top navigation -->
-        <?php include 'template/top.php' ?>
+        <?php $this->load->view('template/top'); ?>
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -136,7 +137,7 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <?php include 'template/footer-info.php' ?>
+        <?php $this->load->view('template/footer-info'); ?>
         <!-- /footer content -->
 
     </div>
@@ -152,7 +153,7 @@
 <!-- Bootstrap Colorpicker -->
 <script src="<?= base_url("vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js")?>"></script>
 
-<?php include 'template/script-footer.php' ?>
+<?php $this->load->view('template/script-footer'); ?>
 
 <script>
 

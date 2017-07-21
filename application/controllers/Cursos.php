@@ -6,12 +6,11 @@ class Cursos extends CI_Controller{
     public function index(){
         $this->load->model("cursos_model");
         $cursos = $this->cursos_model->getAll();
-        $this->load->helper("utils");
-        $this->load->view("curso-list.php",array("cursos" => $cursos));
+        $this->load->view("cursos/list.php",array("cursos" => $cursos));
     }
 
     public function form(){
-        return $this->load->view("curso-form.php");
+        return $this->load->view("cursos/form.php");
     }
 
     public function novo() {
@@ -26,5 +25,12 @@ class Cursos extends CI_Controller{
         $this->load->model("cursos_model");
         $this->cursos_model->salva($curso);
         redirect("cursos");
+    }
+
+
+    public function edit($idCurso){
+        $this->load->model("cursos_model");
+        $dados['curso'] = $this->cursos_model->getById($idCurso);
+        return $this->load->view("cursos/form.php", $dados);
     }
 }

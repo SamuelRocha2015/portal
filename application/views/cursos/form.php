@@ -1,16 +1,17 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include 'template/header.php' ?>
+    <?php $this->load->view('template/header'); ?>
 </head>
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
-        <?php include 'template/top-body.php' ?>
+        <?php $this->load->view('template/top-body'); ?>
 
         <!-- top navigation -->
-        <?php include 'template/top.php' ?>
-
+        <?php $this->load->view('template/top'); ?>
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -34,7 +35,7 @@
                                             <span class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input id="first-name" class="form-control col-md-7 col-xs-12"
-                                                   data-validate-length-range="6" data-validate-words="2"
+                                                   data-validate-length-range="6" data-validate-words="2" value="<?=$curso['codigo']?>"
                                                    name="codigo" required="required" type="text">
                                         </div>
                                     </div>
@@ -43,7 +44,7 @@
                                                     class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input id="nome" class="form-control col-md-7 col-xs-12"
-                                                   data-validate-length-range="6" data-validate-words="2" name="nome"
+                                                   data-validate-length-range="6" data-validate-words="2" name="nome" value="<?=$curso['nome']?>"
                                                    required="required" type="text">
                                         </div>
                                     </div>
@@ -52,7 +53,7 @@
                                                     class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input type="number" id="horas" name="horas" required="required"
-                                                   data-validate-minmax="10,100"
+                                                   data-validate-minmax="10,100" value="<?=$curso['horas']?>"
                                                    class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
@@ -60,7 +61,7 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="preco">Preço <span
                                                     class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="preco" name="preco" required="required"
+                                            <input type="text" id="preco" name="preco" required="required" value="<?=numeroEmReais($curso['preco'])?>"
                                                    class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
@@ -68,7 +69,7 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12"
                                                for="textarea">Detalhes</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="detalhes" name="detalhes"
+                                            <textarea id="detalhes" name="detalhes" value="<?=$curso['detalhe']?>"
                                                       class="form-control col-md-7 col-xs-12"></textarea>
                                         </div>
                                     </div>
@@ -90,13 +91,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <?php include 'template/footer-info.php' ?>
+        <?php $this->load->view('template/footer-info'); ?>
         <!-- /footer content -->
 
     </div>
 </div>
-
-<?php include 'template/script-footer.php' ?>
+<?php $this->load->view('template/script-footer'); ?>
 
 </body>
 </html>
