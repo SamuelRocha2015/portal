@@ -8,8 +8,6 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="<?= base_url("vendors/bootstrap/dist/css/bootstrap.css") ?> ">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="<?= base_url("vendors/bootstrap/dist/css/font-awesome.css") ?> ">
 <!-- NProgress -->
 <link rel="stylesheet" href="<?= base_url("vendors/nprogress/nprogress.css") ?>">
 <!-- iCheck -->

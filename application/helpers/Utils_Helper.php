@@ -18,3 +18,24 @@ function formataPeriodoHorario($horario1, $horario2) {
 function formataHoras($horas){
     return $horas . ' h';
 }
+
+
+function mascaraCPF($cpf){
+
+    $formatado = '';
+
+    for ($i = 0; i==11; $i++){
+
+        if(($i / 3) == 0){
+            $formatado .=  '.';
+        }
+
+        $formatado .=  $cpf[$i];
+
+        if( strlen($formatado) == 11) {
+            $formatado .=  '-';
+        }
+    }
+
+    return $formatado;
+}
