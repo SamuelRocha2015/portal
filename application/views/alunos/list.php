@@ -52,13 +52,13 @@
                                         <tr>
                                             <td><?= $aluno["matricula"]?></td>
                                             <td><?= $aluno["nome"]?></td>
-                                            <td><?= mascaraCPF( $aluno["CPF"])?></td>
+                                            <td><?= mascaraCPF( $aluno["cpf"])?></td>
                                             <td><?= $aluno["status"]?></td>
                                         </tr>
                                     <?php endforeach ?>
                                     </tbody>
                                 </table>
-                                <button type="button" class="btn btn-default" href="<?= base_url('categorias/form') ?>">Cadastrar Nova</button>
+                                <button type="button" class="btn btn-default" href="<?= base_url('categorias/form') ?>">Cadastrar Novo</button>
 
                             </div>
                         </div>

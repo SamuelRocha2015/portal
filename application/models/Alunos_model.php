@@ -13,7 +13,7 @@ class Alunos_model  extends CI_Model {
         $this->db->from($this->table);
         $this->db->order_by("status desc");
         $query = $this->db->get();
-        return $query->result();
+        return $query->result_array();
     }
 
 }

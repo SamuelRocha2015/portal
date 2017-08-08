@@ -21,21 +21,5 @@ function formataHoras($horas){
 
 
 function mascaraCPF($cpf){
-
-    $formatado = '';
-
-    for ($i = 0; i==11; $i++){
-
-        if(($i / 3) == 0){
-            $formatado .=  '.';
-        }
-
-        $formatado .=  $cpf[$i];
-
-        if( strlen($formatado) == 11) {
-            $formatado .=  '-';
-        }
-    }
-
-    return $formatado;
+    return substr($cpf,0,3).'.'.substr($cpf,3,3).'.'.substr($cpf,6,3).'-'.substr($cpf,9,2);;
 }
