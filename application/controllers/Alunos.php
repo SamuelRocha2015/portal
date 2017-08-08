@@ -8,7 +8,6 @@ class Alunos extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model("alunos_model");
-        $this->load->model("base_model");
     }
 
     public function index(){
@@ -17,7 +16,11 @@ class Alunos extends CI_Controller {
     }
 
     public function form(){
+        $this->load->model("cursos_model");
+        $this->load->model("base_model");
+
         $data['universidades'] = $this->base_model->getAll("categoria");
+        $data['cursos'] = $this->cursos_model->get_cursos();
         return $this->load->view("alunos/form.php", $data);
     }
 

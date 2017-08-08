@@ -22,4 +22,12 @@ class Cursos_Model extends CI_Model{
         return $this->db->get_where($this->table,array("id" => $idCurso))->row_array();
     }
 
+    public function get_cursos() {
+
+        $this->db->select('id, codigo, nome');
+        $this->db->from($this->table);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
 }

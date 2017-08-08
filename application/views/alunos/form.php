@@ -77,9 +77,69 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fone">Formação<span
                                                     class="required">*</span></label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="fone" class="form-control col-md-7 col-xs-12"
-                                                   data-validate-length-range="6" data-validate-words="2" name="fone"
-                                                   required="required" type="text">
+
+                                            <table>
+                                                <?php foreach ($universidades as $univ) :?>
+                                                    <tr>
+                                                        <td> <label> <input type="radio" id="universidade" name="universidade" value="<?php echo $univ['id']; ?>" class="flat"> <?php echo $univ['nome']; ?> </label></td>
+                                                    </tr>
+                                                <?php endforeach ?>
+
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <hr />
+
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fone">Cursos<span
+                                                    class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                            <table>
+                                                <?php foreach ($cursos as $curso) :?>
+                                                    <tr>
+                                                        <td> <label> <input type="checkbox" id="curso" name="curso" value="<?php echo $curso['id'];?> " class="flat"> <?php echo $curso['codigo'] . ' | ' . $curso['nome']; ?> </label></td>
+                                                    </tr>
+                                                <?php endforeach ?>
+
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+
+                                    <span class="section">Outras informações</span>
+
+
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fone">Forma de Pagamento<span
+                                                    class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <table>
+                                                <tr><td> <label> <input type="radio" id="pgto" name="pgto" value="1" class="flat"> Cartão  </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="pgto" name="pgto" value="2" class="flat"> Boleto </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="pgto" name="pgto" value="3" class="flat"> À Vista </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="pgto" name="pgto" value="4" class="flat"> Negociação </label></td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="item form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fone">Como nos conheceu?<span
+                                                    class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <table>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="1" class="flat"> Facebook  </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="2" class="flat"> Google </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="3" class="flat"> Linkedin </label></td></tr>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="4" class="flat"> Indicação de Amigos </label></td>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="4" class="flat"> Panfletos e cartazes  </label></td>
+                                                <tr><td> <label> <input type="radio" id="con" name="con" value="4" class="flat"> Newsletter (e-mail)  </label></td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
 
